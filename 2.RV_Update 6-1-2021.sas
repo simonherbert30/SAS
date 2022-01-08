@@ -1,9 +1,7 @@
 
 /******************* APPLICATIONS TRACKING PROCEDURE ***********************
 
-ORIGINATOR= STEFANO GENTILE
-DATE= 24/06/2016
-LAST UPDATE= 26/03/2019 BY SG (move R code for interpolation and demo in WPS)
+ORIGINATOR= SIMON HERBERT
 FREQUENCY= QUARTERLY
 SOURCE= RV_DATA (allQX_16vX.txt, RV_infocarQx_201x.xls)
 
@@ -110,7 +108,7 @@ RUN;
 DATA infocar_1;
 	SET infocar;
 	 
-	modelName=tranwrd(modelName,"ª","");
+	modelName=tranwrd(modelName,"Âª","");
 	/*group_field=UPCASE(compress(tranwrd(modelName,"*","")||fuel_type));*/
 
 	format segment $10. version $20. model $20.;
